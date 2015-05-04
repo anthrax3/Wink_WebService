@@ -1,0 +1,37 @@
+﻿
+{ 
+	"user_email" : "sakthivel49@gmail.com", 
+	"user_userid" : "sakthi",
+	"user_deviceudid" : "appleip5",
+	"user_regsourcetype" : "manual",
+	"user_reglocation" :  { 
+		"user_regl_latitude" : "123",
+		"user_regl_longitude" : "456"
+	},
+	"user_password" : "P@ssw0rd",
+	"user_profession" : [ "Engineer" ],
+	"user_sex" : "Male",
+	"user_dob" : "26-07-1990",
+	"user_status" : "Active",
+	"user_profileview" : "1",
+	"user_profilepic" : "10001011011011",
+	"user_relationship" : "Single",
+	"user_education" : [ {		
+		"user_edu_school" : "Bharathi" , 
+		"user_edu_year" : "2005" } ] ,
+	"user_work" : { 
+		"user_work_profession" : "Engineer", 
+		"user_work_workinfo" : [ { 
+			"user_work_winfo_companyname" : "Google" , 
+			"user_work_winfo_year" : "2014" } ] 
+	},
+	"user_map_currentlocation" : { 
+		"latitude" : "123" , 
+		"longitude" : "456"
+	},
+	"user_profilepicurl" : "http://wink.com/sakthi",
+	"user_deleted" : null,
+	"user_confirmationcode" : null,
+	"user_maponlinestatus" : false,
+	"user_mapsharelocation" : false
+	}

@@ -1,0 +1,28 @@
+{
+  "name": "ejabberd-connector",
+  "description": "Connects to ejabberd through the console application.  ",
+  "version": "0.0.3",
+  "private": false,
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "William Burke",
+      "email": "billstron@gmail.com"
+    }
+  ],
+  "repositories": {
+    "type": "git",
+    "path": "https://github.com/billstron/node-ejabberd-connector"
+  },
+  "dependencies": {
+    "express": "3.x"
+  },
+  "readme": "# Ejabberd Connector \nThis is used to control an Ejabberd server over http REST using a node.js server.\n\n\n## API Documentation\n\nThe requests are authenticated using a secret passed in the query parameters:\n\tid={secret}\n\nPOST http://{server address}/check-account:\n* Input -- Json body with a single array parameter named \"args\".  The array should have 2 arguments -- user and host.\n \n\tPOST http://heads.com:7564/check-account?id=\"secretAPICode\"\n\t{\n\t\t\"args\" : [\n\t\t\t\"butts\",\n\t\t\t\"heads.com\"\n\t\t]\n\t}\n\n* Output -- Json body with a single boolean \"response\" variable indicating if the account exists on the server.\n\n\t{\n\t\t\"response\" : true\n\t}\n\nPOST http://{server address}/check-password:\n* Input -- Json body with a single array parameter named \"args\".  The array should have 3 arguments -- user, host, and password.\n\t\n\tPOST http://heads.com:7564/check-password?id=\"secretAPICode\" \n\t{\n\t\t\"args\" : [\n\t\t\t\"butts\",\n\t\t\t\"heads.com\",\n\t\t\t\"secretOfTheButts\"\n\t\t]\n\t}\n\n* Output -- Json body with a single boolean \"response\" variable indicating if the account/password are correct.\n\n\t{\n\t\t\"response\" : true\n\t}\n\nPOST http://{server address}/change-password:\n* Input -- Json body with a single array parameter named \"args\".  The array should have 3 arguments -- user, host, and new password.\n \n\tPOST http://heads.com:7564/change-password?id=\"secretAPICode\"\n\t{\n\t\t\"args\" : [\n\t\t\t\"butts\",\n\t\t\t\"heads.com\",\n\t\t\t\"secretOfTheButts\"\n\t\t]\n\t}\n\t\n* Output -- Json body with a single boolean \"response\" variable indicating if the password was successfully changed.\n\n\t{\n\t\t\"response\" : true\n\t}",
+  "readmeFilename": "README.md",
+  "_id": "ejabberd-connector@0.0.3",
+  "dist": {
+    "shasum": "5578530fe261a3c13d2cdcd5b658ed83d1928832"
+  },
+  "_from": "ejabberd-connector@0.0.3",
+  "_resolved": "https://registry.npmjs.org/ejabberd-connector/-/ejabberd-connector-0.0.3.tgz"
+}
